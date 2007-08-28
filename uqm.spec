@@ -65,7 +65,6 @@ install -D -m 644 %{name}-16.png %{buildroot}%{_miconsdir}/%{name}.png
 install -d -m 755 %{buildroot}%{_datadir}/applications
 cat >  %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=%{title}
 Comment=%{longtitle}
 Exec=%{_gamesbindir}/%{name}
