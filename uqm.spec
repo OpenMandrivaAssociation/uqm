@@ -72,7 +72,7 @@ Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=false
-Categories=Game/Strategy
+Categories=Game/Strategy;
 EOF
 
 %post
