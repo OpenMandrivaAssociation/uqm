@@ -24,6 +24,7 @@ BuildRequires:	libvorbis-devel
 BuildRequires:	libmikmod-devel
 BuildRequires:	mesaglu-devel
 ExcludeArch:	x86_64 amd64
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The Ur-Quan Masters is a port of the 3DO version of Star Control 2.
