@@ -1,6 +1,6 @@
 %define name	uqm
 %define version	0.6.2
-%define release %mkrel 2
+%define release %mkrel 4
 %define	title		Ur-Quan Masters
 %define	longtitle	The Ur-Quan Masters
 
