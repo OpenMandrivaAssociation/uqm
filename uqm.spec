@@ -1,6 +1,6 @@
 %define name	uqm
 %define version	0.6.2
-%define release %mkrel 5
+%define release %mkrel 6
 %define	title		Ur-Quan Masters
 %define	longtitle	The Ur-Quan Masters
 
@@ -8,7 +8,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	The Ur-Quan Masters
-License:	GPL
+License:	GPLv2
 Group:		Games/Strategy
 URL:		http://sc2.sourceforge.net
 Source0:	http://prdownloads.sourceforge.net/sc2/%{name}-%{version}-source.tar.bz2
