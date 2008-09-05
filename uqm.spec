@@ -1,6 +1,6 @@
 %define name	uqm
 %define version	0.6.2
-%define release %mkrel 6
+%define release %mkrel 7
 %define	title		Ur-Quan Masters
 %define	longtitle	The Ur-Quan Masters
 
@@ -72,7 +72,7 @@ Icon=%{name}
 Terminal=false
 Type=Application
 StartupNotify=false
-Categories=Game/Strategy;
+Categories=Game;StrategyGame
 EOF
 
 %if %mdkversion < 200900
