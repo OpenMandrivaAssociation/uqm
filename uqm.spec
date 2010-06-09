@@ -23,7 +23,7 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	libmikmod-devel
 BuildRequires:	mesaglu-devel
-ExcludeArch:	x86_64 amd64
+#ExcludeArch:	x86_64 amd64
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -31,7 +31,7 @@ The Ur-Quan Masters is a port of the 3DO version of Star Control 2.
 
 %prep
 %setup -q -n %{name}-%{version}/sc2
-%patch -p 2
+%patch0 -p 2
 bzcat %{SOURCE1} > %{name}-16.png
 bzcat %{SOURCE2} > %{name}-32.png
 bzcat %{SOURCE3} > %{name}-48.png
