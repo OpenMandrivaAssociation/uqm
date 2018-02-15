@@ -1,37 +1,33 @@
-%define name	uqm
-%define version	0.6.2
-%define release 9
 %define	title		Ur-Quan Masters
 %define	longtitle	The Ur-Quan Masters
+%define debug_package	%{nil}
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		uqm
+Version:	0.7.0
+Release:	1
 Summary:	The Ur-Quan Masters
 License:	GPLv2
 Group:		Games/Strategy
 URL:		http://sc2.sourceforge.net
-Source0:	http://prdownloads.sourceforge.net/sc2/%{name}-%{version}-source.tar.bz2
+Source0:	https://sourceforge.net/projects/sc2/files/UQM/%(echo %{version} |cut -d. -f1-2)/uqm-%{version}-1-source.tgz
 Source1:	%{name}-16.png.bz2
 Source2:	%{name}-32.png.bz2
 Source3:	%{name}-48.png.bz2
 Patch0:		%{name}-0.6.2-build.patch
 Requires:	%{name}-content
-BuildRequires:	SDL-devel >= 1.2.3
-BuildRequires:	SDL_image-devel
-BuildRequires:	SDL_mixer-devel
-BuildRequires:	libvorbis-devel
-BuildRequires:	libmikmod-devel
-BuildRequires:	mesaglu-devel
-#ExcludeArch:	x86_64 amd64
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRequires:	pkgconfig(sdl)
+BuildRequires:	pkgconfig(SDL_image)
+BuildRequires:	pkgconfig(SDL_mixer)
+BuildRequires:	pkgconfig(vorbis)
+BuildRequires:	pkgconfig(libmikmod)
+BuildRequires:	pkgconfig(glu)
 
 %description
 The Ur-Quan Masters is a port of the 3DO version of Star Control 2.
 
 %prep
-%setup -q -n %{name}-%{version}/sc2
-%patch0 -p 2
+%setup -q -n %{name}-%{version}-1
+%apply_patches
 bzcat %{SOURCE1} > %{name}-16.png
 bzcat %{SOURCE2} > %{name}-32.png
 bzcat %{SOURCE3} > %{name}-48.png
