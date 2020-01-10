@@ -27,7 +27,7 @@ The Ur-Quan Masters is a port of the 3DO version of Star Control 2.
 
 %prep
 %setup -q -n %{name}-%{version}-1
-%apply_patches
+%autopatch -p1
 bzcat %{SOURCE1} > %{name}-16.png
 bzcat %{SOURCE2} > %{name}-32.png
 bzcat %{SOURCE3} > %{name}-48.png
