@@ -1,5 +1,5 @@
 sources:
-  "uqm-16.png.bz2": 378b25caeb19cf27ebe43d59d645a64490a80b7d
-  "uqm-32.png.bz2": d64690226d234f6892c695963aa7a4c29a965946
-  "uqm-48.png.bz2": c23a112ca994a47892e79933d19107125a7996de
-  uqm-0.7.0-1-source.tgz: cd59f803dc52e18b7572ba108afd98d10cc02cb8
+  uqm-16.png: 32fbbca6eddafbadf58afff813faf3559a41791c
+  uqm-32.png: 39c7617752c6a4fc6ae142039656d787bdf0dcfc
+  uqm-48.png: 03afea1f3cca6392150d5fb8fe9a31dcd858927d
+  uqm-0.8.0-src.tgz: 7e1d76948068ea36f6ca9ae42423449c3bb95fa6
