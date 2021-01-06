@@ -13,7 +13,6 @@ Source0:	https://sourceforge.net/projects/sc2/files/UQM/%(echo %{version} |cut -
 Source1:	%{name}-16.png
 Source2:	%{name}-32.png
 Source3:	%{name}-48.png
-#Patch0:		%{name}-0.6.2-build.patch
 Requires:	%{name}-content
 Suggests:	%{name}-voice
 Suggests:	%{name}-3domusic
@@ -55,9 +54,9 @@ perl -pi -e 's|%{_prefix}|%{buildroot}%{_prefix}|' build.vars
 ./build.sh uqm install
 
 # icons
-install -D -m 644 %{S:3} %{buildroot}%{_liconsdir}/%{name}.png 
-install -D -m 644 %{S:2} %{buildroot}%{_iconsdir}/%{name}.png 
-install -D -m 644 %{S:1} %{buildroot}%{_miconsdir}/%{name}.png
+install -D -m 644 %{S:3} %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/%{name}.png
+install -D -m 644 %{S:2} %{buildroot}%{_datadir}/icons/hicolor/32x32/apps/%{name}.png
+install -D -m 644 %{S:1} %{buildroot}%{_datadir}/icons/hicolor/16x16/apps/%{name}.png
 
 # menu
 install -d -m 755 %{buildroot}%{_datadir}/applications
@@ -73,6 +72,8 @@ StartupNotify=false
 Categories=Game;StrategyGame
 EOF
 
+mkdir -p %{buildroot}%{_gamesdatadir}/content/addons
+
 %files
 %defattr(-,root,root)
 %doc AUTHORS BUGS COPYING WhatsNew ChangeLog README Contributing
@@ -81,6 +82,4 @@ EOF
 %{_gamesdatadir}/%{name}
 %{_libdir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
-%{_iconsdir}/%{name}.png
-%{_miconsdir}/%{name}.png
-%{_liconsdir}/%{name}.png
+%{_datadir}/icons/hicolor/*/apps/%{name}.png
