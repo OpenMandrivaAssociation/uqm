@@ -15,10 +15,12 @@ Source2:	%{name}-32.png
 Source3:	%{name}-48.png
 #Patch0:		%{name}-0.6.2-build.patch
 Requires:	%{name}-content
+Suggests:	%{name}-voice
+Suggests:	%{name}-3domusic
 BuildRequires:	pkgconfig(sdl2)
 BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	pkgconfig(libmikmod)
-BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(libpng16)
 
 %description
 The Ur-Quan Masters is a port of the 3DO version of Star Control 2.
