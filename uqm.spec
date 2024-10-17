@@ -8,7 +8,7 @@ Release:	1
 Summary:	The Ur-Quan Masters
 License:	GPLv2
 Group:		Games/Strategy
-URL:		http://sc2.sourceforge.net
+URL:		https://sc2.sourceforge.net
 Source0:	https://sourceforge.net/projects/sc2/files/UQM/%(echo %{version} |cut -d. -f1-2)/uqm-%{version}-src.tgz
 Source1:	%{name}-16.png
 Source2:	%{name}-32.png
